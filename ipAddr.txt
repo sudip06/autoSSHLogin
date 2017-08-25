@@ -1,2 +1,2 @@
-90.0.24.91
-90.0.24.91
+127.0.0.1:<login>:<password>:df -h,ps -aux
+90.0.24.92:<login>:<password>:ls
