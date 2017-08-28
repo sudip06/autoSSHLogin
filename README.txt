@@ -19,6 +19,11 @@ The program uses primarily paramiko package and has been implemented by using py
 Testing
 =======
 
+Configuration file:ipAddr.txt
+=============================
+127.0.0.1:<login>:<password>:df -h,ps -aux
+90.0.24.92:<login>:<password>:ls
+
 
 Contents of output1.txt
 
