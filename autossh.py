@@ -25,9 +25,7 @@ def readIpAddress():
     try:
         with open('ipAddr.txt','rb') as csvFile:
             ipList=csv.reader(csvFile, delimiter=':')
-            data=[]
-            for row in ipList:
-                data.append(row)
+            data=[element for element in ipList]
             return data
     except IOError:
         print "file ipAddr.txt does not exist"
@@ -35,11 +33,8 @@ def readIpAddress():
 ipList=readIpAddress()
 
 for index,ipData in enumerate(ipList):
-    ipAddress = ipData[0]
-    username  = ipData[1]
-    password  = ipData[2]
+    ipAddress, username, password, commandsToExecute  = ipData
     session   = paramiko.SSHClient()
-    commandsToExecute = ipData[3]
     
     if is_valid_ipv4_address(ipAddress)==True:
         try:
